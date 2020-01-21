@@ -27,6 +27,7 @@ namespace Modus
             }
 
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
         }
     }
 }
