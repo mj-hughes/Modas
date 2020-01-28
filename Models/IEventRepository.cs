@@ -1,7 +1,5 @@
-﻿using Modas.Models;
-using System.Linq;
-
-namespace Modus.Models
+﻿using System.Linq;
+namespace Modas.Models
 {
     public interface IEventRepository
     {
