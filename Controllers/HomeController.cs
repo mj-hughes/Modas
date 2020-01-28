@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Modus.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Modas.Models;
 
 namespace Modas.Controllers
 {
     public class HomeController : Controller
     {
+        //public ViewResult Index() => View();
         private IEventRepository repository;
         public HomeController(IEventRepository repo)
         {
