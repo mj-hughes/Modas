@@ -28,9 +28,7 @@ namespace Modas.Models
                     context.Locations.Add(l);
                     context.SaveChanges();
                 }
-                // Probably should be here context.SaveChanges();
             }
-            // Don't add seed data if there already is data
             if (!context.Events.Any())
             {
                 DateTime localDate = DateTime.Now;
@@ -51,11 +49,11 @@ namespace Modas.Models
                     for (int i = 0; i < num; i++)
                     {
                         // random between 0 and 23 for hour of the day
-                        int hour = rnd.Next(0, 24);
+                        int hour = rnd.Next(0, 23);
                         // random between 0 and 59 for minute of the day
-                        int minute = rnd.Next(0, 60);
+                        int minute = rnd.Next(0, 59);
                         // random between 0 and 59 for seconds of the day
-                        int second = rnd.Next(0, 60);
+                        int second = rnd.Next(0, 59);
 
                         // random location
                         int loc = rnd.Next(0, Locations.Count());
@@ -74,7 +72,6 @@ namespace Modas.Models
                         // save changes to database
                         context.SaveChanges();
                     }
-
                     // add 1 day
                     eventDate = eventDate.AddDays(1);
                 }

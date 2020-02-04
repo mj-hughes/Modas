@@ -19,9 +19,7 @@ namespace Modas
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                  //.UseStartup<Startup>();
-                  // bcs seeding data
-                  .UseStartup<Startup>()
+                   .UseStartup<Startup>()
                    .UseDefaultServiceProvider(options => options.ValidateScopes = false);
     }
 }
